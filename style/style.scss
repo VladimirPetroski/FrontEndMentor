@@ -8,29 +8,30 @@
   --dark-cyan: hsl(167, 40%, 24%);
   --dark-blue: hsl(198, 62%, 26%);
   --moderate-cyan: hsl(168, 34%, 41%);
+
   /* color neutral */
   --darker-blue: hsl(212, 27%, 19%);
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
   --dark-grayish-blue: hsl(232, 10%, 55%);
   --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
+
   /* typography */
   --font-size: 18px;
   --ff-primary: "Barlow", sans-serif;
   --primary-weight-600: 600;
+
   --ff-secondary: "Fraunces", serif;
   --secondary-weight-700: 700;
   --secondary-weight-900: 900;
 }
 
-*, ::after, ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+*,::after,::before{
+  box-sizing: border-box;
 }
 
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -44,12 +45,8 @@ header {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-inline: 2.2em;
 }
 
@@ -59,16 +56,12 @@ nav {
 }
 
 ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 ul li {
   list-style: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .nav-list {
@@ -81,7 +74,7 @@ a {
   color: var(--white);
 }
 
-.top-section {
+.top-section{
   width: 100%;
   position: relative;
 }
@@ -91,7 +84,7 @@ a {
   background-size: contain;
 }
 
-.main-title {
+.main-title{
   position: absolute;
   top: 20%;
   left: 25%;
@@ -100,94 +93,90 @@ a {
   font-family: 'Fraunces',serif;
 }
 
-.arrow-down {
+.arrow-down{
   position: absolute;
   top: 35%;
   left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  transform: translate(-50%,50%);
 }
 
-.colorful {
-  display: -ms-grid;
+.colorful{
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
   grid-gap: 0;
-}
 
-.colorful img {
-  width: 100%;
+  img{
+    width: 100%;
+  }
 }
 
 .transform,
-.stand-out {
+.stand-out{
   margin: auto;
   max-width: 400px;
 }
 
-h2, h3, h4 {
+h2,h3,h4{
   font-family: var(--ff-secondary);
   font-weight: var(--secondary-weight-700);
 }
 
-h2 {
+h2{
   font-size: 3.1rem;
 }
 
-p {
+p{
   font-family: var(--ff-primary);
 }
 
 .transform-description p,
-.stand-out p {
+.stand-out p{
   line-height: 1.6;
   color: var(--dark-grayish-blue);
   font-size: 1rem;
   margin-bottom: 3rem;
 }
 
-.learnMore-btn {
+.learnMore-btn{
   font-family: var(--ff-secondary);
   color: #000;
 }
 
-.transform a {
+.transform a{
   position: relative;
   margin-top: 2rem;
+
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -7px;
+    width: 110%;
+    height: .5em;
+    background-color: hsl(51, 95%, 84%);
+    border-radius: 20px;
+    z-index: -1;
+  }
 }
 
-.transform a:after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -7px;
-  width: 110%;
-  height: .5em;
-  background-color: #fdf1af;
-  border-radius: 20px;
-  z-index: -1;
-}
-
-.stand-out a {
+.stand-out a{
   position: relative;
   margin-top: 2rem;
-}
 
-.stand-out a:after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: -7px;
-  width: 110%;
-  height: .5em;
-  background-color: #f8cec9;
-  border-radius: 20px;
-  z-index: -1;
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -7px;
+    width: 110%;
+    height: .5em;
+    background-color: hsl(6, 77%, 88%);
+    border-radius: 20px;
+    z-index: -1;
+  }
 }
 
 .cherry,
@@ -196,14 +185,14 @@ p {
 }
 
 .cherry-img,
-.tangerine-img {
+.tangerine-img{
   position: absolute;
   inset: 0;
   z-index: -10;
 }
 
 .graphic-design,
-.photography {
+.photography{
   max-width: 350px;
   text-align: center;
   margin: auto;
@@ -216,6 +205,5 @@ p {
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: hsl(228, 45%, 44%);
 }
-/*# sourceMappingURL=style.css.map */
