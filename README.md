@@ -1,2 +1,2 @@
 # FrontEndMentor
-Hopefully, my first successful repository
+My first successful repository
